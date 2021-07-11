@@ -8,6 +8,7 @@ Makefile
 *.$$$
 *.s#*
 *.b#*
+Maiskolben_THT/Maiskolben_THT
 
 # Prerequisites
 *.d
@@ -17,3 +18,6 @@ Makefile
 *.lo
 *.o
 *.obj
+
+# Vscode
+.vscode
