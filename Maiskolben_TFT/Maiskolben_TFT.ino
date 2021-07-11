@@ -1168,6 +1168,7 @@ void loop(void)
 				{
 					set_t = t;
 					updateEEPROM();
+					display();
 				}
 			}
 			break;
@@ -1183,6 +1184,7 @@ void loop(void)
 					{
 						stored[slot] = t;
 						updateEEPROM();
+						display();
 					}
 				}
 			}
@@ -1190,14 +1192,17 @@ void loop(void)
 		//Clear errors
 		case 'C':
 			error = NO_ERROR;
+			display();
 			break;
 		//Set standby
 		case 'S':
 			setStandby(Serial.read() == '1');
+			display();
 			break;
 		//Set on/off
 		case 'O':
 			setOff(Serial.read() == '0');
+			display();
 			break;
 		}
 	}
